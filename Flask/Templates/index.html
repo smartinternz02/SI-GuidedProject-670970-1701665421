@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705622400&semt=sph');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }   
+
+        .container {
+            max-width: 600px;
+            margin: 300px auto;
+            background-color: none;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h1, h2 {
+            color: black;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scene Classification</h1>
+        <form method="post" action="/success" enctype="multipart/form-data">
+            <label for="imageInput">Choose an image:</label>
+            <input type="file" name="file" />
+            <button type="submit">Predict</button>
+        </form>
+        <p>Or enter image URL:</p>
+        <form method="post" action="/success">
+            <label for="urlInput">Image URL:</label>
+            <input type="text" id="urlInput" name="image_url" placeholder="Enter image URL">
+            <button type="submit">Predict</button>
+        </form>
+        <h2>About</h2>
+        <p>The ability to accurately classify scenes in images is fundamental in various applications, ranging from autonomous navigation to image organization and augmented reality. In this project, we explore a novel approach to improve scene classification accuracy by leveraging the benefits of virtual images and real-life photographs. By training a convolutional neural network (CNN) model on virtual images generated from 3D virtual worlds and then fine-tuning it with real images, we aim to investigate the potential of transferring knowledge from simulation to reality. The dataset used in this project consists of two sets: virtual images and real images, both labeled with six scene categories. We employ the VGG16 model, a deep CNN renowned for its powerful feature extraction capabilities. This project aims to uncover whether learning from virtual data can enhance the accuracy and generalization of scene classification in real-world scenarios, ultimately contributing to advancements in computer vision and image analysis.</p>
+    </div>
+</body>
+</html>
